@@ -23,6 +23,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
+    console.error("QR generation failed:", error);
     return NextResponse.json(
       { error: "Failed to generate QR" },
       { status: 500 }

@@ -8,20 +8,20 @@ const VideoPage = () => {
   const uuid = params?.uuid as string;
   const [video, setVideo] = useState<string | null>(null);
 
-  const handleFetchVideo = async () => {
-    try {
-      const res = await fetch(`/api/get-video?uuid=${uuid}`);
-      if (!res.ok) throw new Error("Video not found");
-      const { url } = await res.json();
-      console.log("Video URL:", url);
-      setVideo(url);
-    } catch (error) {
-      console.error("Failed to fetch video:", error);
-      setVideo(null);
-    }
-  };
-
   useEffect(() => {
+    const handleFetchVideo = async () => {
+      try {
+        const res = await fetch(`/api/get-video?uuid=${uuid}`);
+        if (!res.ok) throw new Error("Video not found");
+        const { url } = await res.json();
+        console.log("Video URL:", url);
+        setVideo(url);
+      } catch (error) {
+        console.error("Failed to fetch video:", error);
+        setVideo(null);
+      }
+    };
+
     if (uuid) {
       handleFetchVideo();
     }
