@@ -51,18 +51,18 @@ export default function ArchivePage() {
   return (
     <div className="p-8 text-center flex flex-col items-center">
       <h1 className="text-2xl font-bold mb-4"> Video Arhiva</h1>
-      <table className="w-full">
+      <table className="w-1/2">
         <thead>
           <tr>
-            <th className="border px-4 py-2">Ime</th>
-            <th className="border px-4 py-2">QR Code</th>
+            <th className="border py-2">Ime Projekta</th>
+            <th className="border py-2">QR Code</th>
           </tr>
         </thead>
         <tbody>
           {projects.map((project) => (
             <tr key={project.uuid}>
-              <td className="border px-4 py-2">{project.name}</td>
-              <td className="border px-4 py-2">
+              <td className="border  py-2">{project.name}</td>
+              <td className="border  py-2">
                 <span
                   onClick={() => fetchQrCode(project.uuid)}
                   className="cursor-pointer text-white font-semibold hover:text-amber-300"

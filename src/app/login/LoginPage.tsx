@@ -25,13 +25,13 @@ export default function LoginPage() {
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-2xl mb-4">Prijava</h1>
       <input
-        className="border p-2 mb-4"
+        className="border  w-[300px] p-2 mb-4"
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email Adresa"
       />
       <div className="flex flex-row ">
         <input
-          className="border p-2 mb-4"
+          className="border w-[300px] p-2 mb-4"
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Sifra"
           type="password"
@@ -40,7 +40,7 @@ export default function LoginPage() {
 
       <div className="flex flex-col justify-between ">
         <button
-          className="bg-white text-black p-2 mb-4 hover:bg-amber-300 transition rounded"
+          className="bg-white w-[300px] text-black p-2 mb-4 hover:bg-amber-300 transition rounded cursor-pointer"
           onClick={signIn}
         >
           Prijavi se

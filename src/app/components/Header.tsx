@@ -28,7 +28,7 @@ const Header = () => {
           router.push("/");
         }}
       >
-        Sign Out
+        Odjavi se
       </button>
     </div>
   );

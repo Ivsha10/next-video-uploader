@@ -44,23 +44,23 @@ export default function UploadPage() {
       <h1 className="text-2xl mb-4">Dodaj Video</h1>
 
       <input
-        className="border p-2 mb-4"
+        className="border w-[300px] p-2 mb-4"
         type="text"
-        placeholder="Project Name"
+        placeholder="Ime Projekta"
         value={projectName}
         onChange={(e) => handleProjectName(e.target.value)}
       />
       <input
-        className="bg-white text-black p-2 rounded cursor-pointer hover:bg-amber-300"
+        className="bg-white text-black p-1 rounded cursor-pointer hover:bg-blue-300"
         type="file"
         accept="video/mp4"
         onChange={(e) => setFile(e.target.files?.[0] || null)}
       />
       <button
-        className="bg-white text-black p-2 rounded cursor-pointer hover:bg-amber-300 mt-4"
+        className="bg-white w-[300px] text-black p-2 rounded cursor-pointer hover:bg-amber-300 mt-4"
         onClick={handleUpload}
       >
-        Upload
+        Dodaj
       </button>
     </main>
   );
