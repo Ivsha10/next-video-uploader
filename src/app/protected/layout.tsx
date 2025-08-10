@@ -5,10 +5,7 @@ type LayoutProps = {
 };
 const layout = ({ children }: LayoutProps) => {
   return (
-    <div
-      className="flex flex-col items-center  h-screen"
-      style={{ backgroundColor: "red" }}
-    >
+    <div className="flex flex-col items-center  h-screen bg-black">
       <Header />
       <main className="w-full">{children}</main>
     </div>
