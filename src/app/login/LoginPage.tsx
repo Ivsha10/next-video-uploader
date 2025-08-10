@@ -22,7 +22,7 @@ export default function LoginPage() {
     }, 200);
   };
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
+    <div className="flex flex-col items-center justify-center h-screen bg-black">
       <h1 className="text-2xl mb-4">Prijava</h1>
       <input
         className="border  w-[300px] p-2 mb-4"

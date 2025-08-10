@@ -12,7 +12,7 @@ export default async function ProtectedPage() {
     redirect("/protected/archive");
   }
   return (
-    <div>
+    <div style={{ backgroundColor: "red" }}>
       <h1 className="text-2xl font-bold">Welcome to the Protected Page</h1>
       <p>You are successfully authenticated ✅</p>
     </div>
